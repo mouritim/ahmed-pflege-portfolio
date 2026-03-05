@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahmed Temmouri · Pflegefachkraft Ausbildung</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        body { background-color: #0a1a2f; }
+        body {
+            background-color: #0a1a2f;
+        }
         .btn-yellow {
             background-color: #fbbf24;
             color: #0a1a2f;
@@ -22,31 +27,33 @@
             background-color: #f59e0b;
             transform: scale(1.05);
         }
-        /* تحسين الإطار الداكن للصورة المحدثة */
-        .profile-img-container {
-            width: 320px; /* توسيع الإطار لعرض المزيد من الصورة */
-            height: 320px;
-            border: 4px solid #fbbf24;
-            border-radius: 50%; /* الحفاظ على الشكل الدائري */
-            overflow: hidden;
-            box-shadow: 0 15px 35px rgba(251, 191, 36, 0.4);
-            transition: transform 0.3s ease;
-            margin: 0 auto;
-        }
-        .profile-img-container:hover {
-            transform: scale(1.03);
-        }
+        /* تحسين الصورة: HD + وضوح كامل */
         .profile-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* يضمن تغطية الصورة للإطار بالكامل دون تشويه */
-            object-position: center top; /* الحفاظ على الجزء العلوي من الصورة في المنتصف */
+            border: 4px solid #fbbf24;
+            box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.5);
+            image-rendering: high-quality;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            transform: translateZ(0);
+            transition: transform 0.3s ease;
         }
-        .text-blue-light { color: #b8d0e7; }
+        .profile-img:hover {
+            transform: scale(1.02);
+        }
+        .card-dark {
+            background-color: #102a43;
+            border: 1px solid #1e3a5f;
+        }
+        .text-blue-light {
+            color: #b8d0e7;
+        }
     </style>
 </head>
 <body class="text-gray-100 antialiased" style="background-color: #0a1a2f;">
 
+    <!-- رأس الصفحة -->
     <header class="bg-[#0a1a2f] border-b border-[#1e3a5f] sticky top-0 z-40 shadow-lg">
         <div class="max-w-6xl mx-auto px-5 py-3 flex items-center justify-between flex-wrap gap-2">
             <span class="text-xl font-semibold tracking-tight text-white">Ahmed T. <span class="text-sm font-normal text-blue-300">· Pflegefachkraft in Ausbildung</span></span>
@@ -60,8 +67,9 @@
         </div>
     </header>
 
+    <!-- قسم البطل مع الصورة (HD وواضحة) -->
     <section class="max-w-6xl mx-auto px-5 pt-14 pb-8 md:pt-20">
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-12">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
             <div>
                 <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight">
                     Ahmed Temmouri <br><span class="text-yellow-400">Engagierte Pflegefachkraft</span>
@@ -70,20 +78,22 @@
                     Empathie, Präzision & Leidenschaft für die Pflege in Deutschland.<br>
                     Motivierter Auszubildender mit B2-Deutsch und praktischer Pflegeerfahrung.
                 </p>
+                <!-- رموز سريعة -->
                 <div class="flex flex-wrap gap-5 mt-6 text-sm font-medium">
                     <span class="bg-[#1e3a5f] px-4 py-2 rounded-full shadow-sm flex items-center gap-2 border border-[#2b4b75] text-white"><i class="fas fa-check-circle text-yellow-400"></i> B2 Deutsch-Niveau</span>
                     <span class="bg-[#1e3a5f] px-4 py-2 rounded-full shadow-sm flex items-center gap-2 border border-[#2b4b75] text-white"><i class="fas fa-heartbeat text-rose-400"></i> 3+ Monate Praktikum</span>
                     <span class="bg-[#1e3a5f] px-4 py-2 rounded-full shadow-sm flex items-center gap-2 border border-[#2b4b75] text-white"><i class="fas fa-language text-yellow-400"></i> 4 Sprachen</span>
                 </div>
             </div>
+            <!-- الصورة الشخصية - الرابط المباشر الجديد HD -->
             <div class="flex-shrink-0">
-                <div class="profile-img-container">
-                    <img src="https://i.postimg.cc/t4G2q1p4/D08-C6-AE8-C1-DD-441-C-90-C3-5-EFF32288-F4-F-Snapseed-Copy.jpg" 
-                         alt="Ahmed Temmouri Profilbild" 
-                         class="profile-img">
-                </div>
+                <img src="https://i.postimg.cc/qR4Vmh4h/Adobe-Scan-5-Marz-2026-1.png" 
+                     alt="Ahmed Temmouri Profilbild" 
+                     class="w-80 h-80 md:w-96 md:h-96 rounded-full object-cover object-center profile-img"
+                     style="object-position: 50% 30%; image-rendering: crisp-edges;">
             </div>
         </div>
+        <!-- شريط إضافي -->
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12 bg-[#102a43] p-5 rounded-2xl shadow-md border border-[#1e3a5f]">
             <div class="flex items-center gap-3"><span class="text-3xl">💙</span> <span class="font-medium text-white">Berufung</span></div>
             <div class="flex items-center gap-3"><span class="text-3xl">🏥</span> <span class="font-medium text-white">Praktikum · Stationäre Pflege · Algerien</span></div>
@@ -91,5 +101,174 @@
         </div>
     </section>
 
-    </body>
+    <!-- Über mich مع النص الجديد -->
+    <section id="ueber-mich" class="max-w-6xl mx-auto px-5 py-14 scroll-mt-16">
+        <h2 class="text-3xl font-bold text-white border-l-8 border-yellow-400 pl-4 mb-10">Über mich</h2>
+        <div class="grid md:grid-cols-3 gap-8 items-start">
+            <div class="md:col-span-2 bg-[#102a43] p-7 rounded-3xl shadow-md border border-[#1e3a5f]">
+                <h3 class="text-2xl font-semibold mb-3 text-white">Motiviert. Zuverlässig. <span class="text-yellow-400">Leidenschaftlich.</span></h3>
+                <p class="text-blue-200 mb-4 leading-relaxed">
+                    Mein Name ist Ahmed Temmouri, ich bin 27 Jahre alt und französischer Staatsbürger. Früh habe ich erkannt, dass die Pflege meine Berufung ist – durch die Begleitung älterer Familienmitglieder sowie durch mein Praktikum als Pflegehelfer und einen Erste-Hilfe-Kurs beim Roten Halbmond. Mein Abitur habe ich erfolgreich abgeschlossen und anschließend Deutsch an der Universität studiert.
+                </p>
+                <p class="text-blue-200 mb-4 leading-relaxed">
+                    Das deutsche Gesundheitssystem begeistert mich durch seine hohen Standards. Die generalistische Ausbildung bietet mir eine ideale Grundlage für eine vielseitige berufliche Zukunft.
+                </p>
+                <p class="text-blue-200 leading-relaxed">
+                    Ich bringe interkulturelle Kompetenz, Mehrsprachigkeit und echtes Einfühlungsvermögen mit – wichtige Eigenschaften für die Arbeit mit Patientinnen und Patienten.
+                </p>
+                <!-- سمات سريعة -->
+                <div class="flex flex-wrap gap-3 mt-6 text-sm">
+                    <span class="bg-[#1e3a5f] px-4 py-2 rounded-full text-blue-200">🤍 Empathie</span>
+                    <span class="bg-[#1e3a5f] px-4 py-2 rounded-full text-blue-200">✅ Zuverlässigkeit</span>
+                    <span class="bg-[#1e3a5f] px-4 py-2 rounded-full text-blue-200">👥 Teamfähigkeit</span>
+                    <span class="bg-[#1e3a5f] px-4 py-2 rounded-full text-blue-200">⚡ Schnelle Auffassung</span>
+                    <span class="bg-[#1e3a5f] px-4 py-2 rounded-full text-blue-200">🌍 Interkulturell</span>
+                    <span class="bg-[#1e3a5f] px-4 py-2 rounded-full text-blue-200">📋 Dokumentation</span>
+                </div>
+            </div>
+            <!-- البطاقة الجانبية مع الصورة (نفس الرابط) -->
+            <div class="bg-[#0a1a2f] p-6 rounded-3xl border border-[#1e3a5f] flex flex-col items-center text-center">
+                <img src="https://i.postimg.cc/qR4Vmh4h/Adobe-Scan-5-Marz-2026-1.png" 
+                     alt="Ahmed Temmouri" 
+                     class="w-48 h-48 rounded-full object-cover object-center mb-3 profile-img"
+                     style="object-position: 50% 30%; image-rendering: crisp-edges;">
+                <span class="text-3xl mb-1">🇩🇿 → 🇩🇪</span>
+                <h4 class="font-bold text-lg text-white">Pflegeausbildung Deutschland</h4>
+                <p class="text-sm text-blue-300 mt-2">Bereit für die Zukunft</p>
+                <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mt-4 shadow-inner">
+                    <i class="fas fa-arrow-right text-[#0a1a2f] text-xl"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- باقي الأقسام (Praktische Erfahrung, Kompetenzen, etc.) -->
+    <!-- Praktische Erfahrung -->
+    <section id="portfolio" class="max-w-6xl mx-auto px-5 py-14 scroll-mt-16">
+        <h2 class="text-3xl font-bold text-white border-l-8 border-yellow-400 pl-4 mb-10">Praktische Erfahrung</h2>
+        <p class="text-blue-300 mb-8 text-lg">Meine bisherige Erfahrung</p>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-[#102a43] rounded-3xl shadow-md overflow-hidden border border-[#1e3a5f]">
+                <div class="h-44 bg-[#1e3a5f] flex items-center justify-center text-7xl text-yellow-400">🛏️</div>
+                <div class="p-5">
+                    <span class="text-sm font-bold text-yellow-400">01</span>
+                    <h3 class="font-bold text-xl mb-1 text-white">Grundpflege</h3>
+                    <p class="text-blue-300 text-sm">Unterstützung bei der Körperpflege, beim An- und Auskleiden und bei der täglichen Hygiene</p>
+                </div>
+            </div>
+            <div class="bg-[#102a43] rounded-3xl shadow-md overflow-hidden border border-[#1e3a5f]">
+                <div class="h-44 bg-[#1e3a5f] flex items-center justify-center text-7xl text-yellow-400">🦽</div>
+                <div class="p-5">
+                    <span class="text-sm font-bold text-yellow-400">02</span>
+                    <h3 class="font-bold text-xl mb-1 text-white">Mobilisation</h3>
+                    <p class="text-blue-300 text-sm">Hilfe bei der Bewegung, Lagerung und Transfers von Patienten im Stationsalltag</p>
+                </div>
+            </div>
+            <div class="bg-[#102a43] rounded-3xl shadow-md overflow-hidden border border-[#1e3a5f]">
+                <div class="h-44 bg-[#1e3a5f] flex items-center justify-center text-7xl text-yellow-400">🧼</div>
+                <div class="p-5">
+                    <span class="text-sm font-bold text-yellow-400">03</span>
+                    <h3 class="font-bold text-xl mb-1 text-white">Hygiene</h3>
+                    <p class="text-blue-300 text-sm">Einhaltung der Hygienestandards, Desinfektion und Infektionsprävention</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kompetenzen -->
+    <section id="kompetenzen" class="max-w-6xl mx-auto px-5 py-14 scroll-mt-16">
+        <h2 class="text-3xl font-bold text-white border-l-8 border-yellow-400 pl-4 mb-10">Meine Fähigkeiten</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#102a43] border border-[#1e3a5f]"><span class="text-4xl">🛏️</span><div><h3 class="font-semibold text-white">Grundpflege</h3><p class="text-sm text-blue-300">Körperpflege, Lagerung, Mobilisation & hygienische Grundversorgung</p></div></div>
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#102a43] border border-[#1e3a5f]"><span class="text-4xl">📋</span><div><h3 class="font-semibold text-white">Dokumentation</h3><p class="text-sm text-blue-300">Präzise Pflegedoku, Vitalzeichen-Protokoll & elektronische Akte</p></div></div>
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#102a43] border border-[#1e3a5f]"><span class="text-4xl">👥</span><div><h3 class="font-semibold text-white">Teamfähigkeit</h3><p class="text-sm text-blue-300">Interdisziplinäre Zusammenarbeit, Übergaben & Kommunikation</p></div></div>
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#102a43] border border-[#1e3a5f]"><span class="text-4xl">💊</span><div><h3 class="font-semibold text-white">Medikamentenvergabe</h3><p class="text-sm text-blue-300">Vorbereitung & Vergabe nach Anordnung (in der Ausbildung erlernt)</p></div></div>
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#102a43] border border-[#1e3a5f]"><span class="text-4xl">❤️</span><div><h3 class="font-semibold text-white">Empathie</h3><p class="text-sm text-blue-300">Einfühlsame Begleitung von Patienten in allen Lebenssituationen</p></div></div>
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#102a43] border border-[#1e3a5f]"><span class="text-4xl">🗣️</span><div><h3 class="font-semibold text-white">Deutsch B2</h3><p class="text-sm text-blue-300">Professionelle Kommunikation mit Patienten & medizinischem Team</p></div></div>
+        </div>
+    </section>
+
+    <!-- Sprachkenntnisse + Kontakt -->
+    <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-8 pb-14">
+        <div class="bg-[#102a43] p-7 rounded-3xl shadow-md border border-[#1e3a5f]">
+            <h3 class="text-2xl font-bold mb-5 flex items-center gap-2 text-white"><i class="fas fa-globe text-yellow-400"></i> Sprachkenntnisse</h3>
+            <div class="space-y-4">
+                <div><span class="font-medium text-white">🇩🇿 Arabisch</span> <span class="text-sm text-blue-300 float-right">Muttersprache</span><div class="w-full h-2 bg-[#1e3a5f] rounded-full mt-1"><div class="w-full h-2 bg-yellow-400 rounded-full"></div></div></div>
+                <div><span class="font-medium text-white">🇫🇷 Français</span> <span class="text-sm text-blue-300 float-right">Fortgeschritten · C1</span><div class="w-full h-2 bg-[#1e3a5f] rounded-full mt-1"><div class="w-11/12 h-2 bg-yellow-400 rounded-full"></div></div></div>
+                <div><span class="font-medium text-white">🇩🇪 Deutsch</span> <span class="text-sm text-blue-300 float-right">Fließend · B2</span><div class="w-full h-2 bg-[#1e3a5f] rounded-full mt-1"><div class="w-4/5 h-2 bg-yellow-400 rounded-full"></div></div></div>
+                <div><span class="font-medium text-white">🇬🇧 English</span> <span class="text-sm text-blue-300 float-right">Gut · B1</span><div class="w-full h-2 bg-[#1e3a5f] rounded-full mt-1"><div class="w-3/5 h-2 bg-yellow-400 rounded-full"></div></div></div>
+            </div>
+        </div>
+        <div id="kontakt" class="bg-[#0a1a2f] text-white p-7 rounded-3xl shadow-lg border border-[#1e3a5f] scroll-mt-16">
+            <h3 class="text-2xl font-bold mb-3 flex items-center gap-2"><i class="fas fa-paper-plane text-yellow-400"></i> Gemeinsam in die Zukunft</h3>
+            <p class="text-blue-300 mb-4 text-sm">Ich freue mich auf Ihre Nachricht – Rückfragen, Kennenlernen oder Einladung.</p>
+            <a href="mailto:mouritim@gmail.com" class="block bg-yellow-400 text-[#0a1a2f] text-center font-semibold py-3 rounded-xl mb-3 shadow-md hover:bg-yellow-300 transition">✉️ E-Mail Senden · Bewerbung Pflegefachkraft</a>
+            <p class="text-center text-blue-400 text-xs border-t border-[#1e3a5f] pt-4 mt-4">🇩🇪 Bereit für die Pflegeausbildung in Deutschland</p>
+        </div>
+    </div>
+
+    <!-- Lebenslauf (CV) -->
+    <div id="lebenslauf" class="max-w-4xl mx-auto px-5 py-14 scroll-mt-16">
+        <div class="bg-[#102a43] p-7 md:p-10 rounded-4xl shadow-2xl border border-[#1e3a5f]">
+            <div class="flex items-center gap-3 border-b pb-4 mb-5 border-yellow-400/30">
+                <i class="fas fa-file-alt text-4xl text-yellow-400"></i>
+                <h2 class="text-2xl font-bold text-white">📄 Lebenslauf – Ahmed Temmouri</h2>
+            </div>
+            <p class="text-blue-300 text-sm mb-4">Pflegefachkraft in Ausbildung · Bewerbungsunterlage 2026</p>
+            <div class="space-y-5 text-blue-200">
+                <div>
+                    <h3 class="text-xl font-bold text-white">Ahmed Temmouri</h3>
+                    <p class="text-blue-300">Bewerbung als Pflegefachkraft (Auszubildender)</p>
+                    <p class="text-sm text-blue-400 mt-1">📍 Oran, Algerien · ✉ mouritim@gmail.com</p>
+                </div>
+                <p class="text-blue-200 italic">Motivierter und einfühlsamer angehender Pflegefachkraft mit praktischer Erfahrung in der Patientenbetreuung. Fundierte Kenntnisse in der Grundpflege sowie in der Dokumentation pflegerischer Maßnahmen. Sehr gute Deutschkenntnisse auf B2-Niveau, hohe Lernbereitschaft und ausgeprägte soziale Kompetenz im Umgang mit Seniorinnen und Senioren.</p>
+                <hr class="border-yellow-400/30">
+                <div>
+                    <h4 class="font-bold text-white flex items-center gap-2"><i class="fas fa-briefcase text-yellow-400"></i> Berufserfahrung & Praktikum</h4>
+                    <p class="font-semibold mt-2 text-white">Praktikant im Pflegebereich (3 Monate)</p>
+                    <p class="text-sm text-blue-300">2024 · Krankenhaus · Oran, Algerien</p>
+                    <ul class="list-disc list-inside text-sm text-blue-200 mt-2 space-y-1">
+                        <li>Unterstützung bei der Grundpflege (Körperpflege, An- und Auskleiden, Mobilisation)</li>
+                        <li>Hilfe bei der Mobilisation von Patienten</li>
+                        <li>Einhaltung der Hygienestandards und Desinfektion</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white flex items-center gap-2"><i class="fas fa-graduation-cap text-yellow-400"></i> Schulbildung & Ausbildung</h4>
+                    <p class="font-semibold mt-2 text-white">Master in Deutsch als Fremdsprache</p>
+                    <p class="text-sm text-blue-300">Universität · Algerien</p>
+                    <p class="font-semibold mt-2 text-white">Abitur (Baccalauréat)</p>
+                    <p class="text-sm text-blue-300">Algerien</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white flex items-center gap-2"><i class="fas fa-star text-yellow-400"></i> Besondere Fähigkeiten</h4>
+                    <div class="flex flex-wrap gap-2 mt-2">
+                        <span class="bg-[#1e3a5f] px-3 py-1 rounded-full text-sm text-blue-200">✔ Hohe Zuverlässigkeit & Verantwortungsbewusstsein</span>
+                        <span class="bg-[#1e3a5f] px-3 py-1 rounded-full text-sm text-blue-200">✔ Teamfähigkeit & respektvolle Kommunikation</span>
+                        <span class="bg-[#1e3a5f] px-3 py-1 rounded-full text-sm text-blue-200">✔ Schnelle Auffassungsgabe</span>
+                        <span class="bg-[#1e3a5f] px-3 py-1 rounded-full text-sm text-blue-200">✔ Einfühlungsvermögen bei Seniorinnen und Senioren</span>
+                        <span class="bg-[#1e3a5f] px-3 py-1 rounded-full text-sm text-blue-200">✔ Belastbarkeit & strukturierte Arbeitsweise</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white flex items-center gap-2"><i class="fas fa-heart text-yellow-400"></i> Interessen</h4>
+                    <ul class="list-disc list-inside text-sm text-blue-200 mt-1">
+                        <li>Lesen: Gesundheit & persönliche Weiterentwicklung</li>
+                        <li>Sport und gesunde Lebensweise</li>
+                        <li>Sprachen lernen (Deutsch, Englisch, Französisch)</li>
+                    </ul>
+                </div>
+                <p class="text-right text-sm text-blue-300 border-t pt-4 mt-4 border-yellow-400/30">Oran, März 2026 · Ahmed Temmouri</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- تذييل -->
+    <footer class="bg-[#0a1a2f] border-t border-[#1e3a5f] py-6 text-center text-sm text-blue-300">
+        <div class="max-w-6xl mx-auto px-5">
+            © 2026 Ahmed Temmouri – Pflegefachkraft in Ausbildung. Alle Rechte vorbehalten.
+        </div>
+    </footer>
+
+</body>
 </html>
