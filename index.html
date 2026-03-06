@@ -21,13 +21,15 @@
             background-color: #fbbf24;
             color: #0a1a2f;
             font-weight: 600;
-            padding: 0.5rem 1rem;
+            padding: 0.75rem 2rem;
             border-radius: 9999px;
             transition: all 0.3s ease;
             display: inline-block;
             text-decoration: none;
             position: relative;
             overflow: hidden;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .btn-yellow:hover {
             background-color: #f59e0b;
@@ -97,7 +99,7 @@
             box-shadow: 0 30px 40px -10px rgba(251, 191, 36, 0.3);
         }
         
-        /* تأثير الشريط السفلي */
+        /* تأثير الشريط العلوي للمعلومات */
         .info-bar-item {
             transition: all 0.3s ease;
         }
@@ -187,6 +189,14 @@
             transform: scale(1.05);
             color: #f59e0b;
         }
+        
+        /* تنسيق الأزرار المزدوجة */
+        .action-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
     </style>
 </head>
 <body class="text-gray-100 antialiased" style="background-color: #0a1a2f;">
@@ -202,7 +212,7 @@
                 <a href="#videobewerbung" class="nav-link text-white">Videobewerbung</a>
                 <a href="#ehrenamt" class="nav-link text-white">Ehrenamt</a>
                 <a href="#kontakt" class="nav-link text-white">Kontakt</a>
-                <a href="https://drive.google.com/file/d/1avd7NGBcaW_bbazXm6sUMRgcvqF7eCyF/view?usp=sharing" target="_blank" class="btn-yellow">📄 Lebenslauf</a>
+                <a href="https://drive.google.com/file/d/1avd7NGBcaW_bbazXm6sUMRgcvqF7eCyF/view?usp=sharing" target="_blank" class="btn-yellow" style="padding: 0.5rem 1rem; font-size: 0.9rem;">📄 Lebenslauf</a>
             </nav>
         </div>
     </header>
@@ -224,6 +234,16 @@
                     <span class="info-bar-item bg-[#1e3a5f] px-4 py-2 rounded-full shadow-sm flex items-center gap-2 border border-[#2b4b75] text-white cursor-pointer transition-all duration-300 hover:bg-[#2b4b75] hover:scale-105"><i class="fas fa-hand-holding-heart text-rose-400"></i> Erste-Hilfe-Kurs</span>
                     <span class="info-bar-item bg-[#1e3a5f] px-4 py-2 rounded-full shadow-sm flex items-center gap-2 border border-[#2b4b75] text-white cursor-pointer transition-all duration-300 hover:bg-[#2b4b75] hover:scale-105"><i class="fas fa-language text-yellow-400"></i> 4 Sprachen</span>
                 </div>
+                
+                <!-- الأزرار الجديدة تحت المعلومات -->
+                <div class="action-buttons">
+                    <a href="https://drive.google.com/file/d/1avd7NGBcaW_bbazXm6sUMRgcvqF7eCyF/view?usp=sharing" target="_blank" class="btn-yellow">
+                        <i class="fas fa-file-pdf mr-2"></i> Lebenslauf ansehen
+                    </a>
+                    <a href="#videobewerbung" class="btn-yellow">
+                        <i class="fas fa-video mr-2"></i> Video ansehen
+                    </a>
+                </div>
             </div>
             <div class="flex-shrink-0">
                 <img src="https://i.postimg.cc/GhFzf65q/B1EA4F65-932A-4C1D-8089-0C565C2829E2.jpg" 
@@ -232,11 +252,7 @@
                      style="object-position: 50% 30%;">
             </div>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12 bg-[#102a43] p-5 rounded-2xl shadow-md border border-[#1e3a5f]">
-            <div class="info-bar-item flex items-center gap-3 cursor-pointer transition-all duration-300 hover:translate-x-2"><span class="text-3xl">💙</span> <span class="font-medium text-white">Berufung</span></div>
-            <div class="info-bar-item flex items-center gap-3 cursor-pointer transition-all duration-300 hover:translate-x-2"><span class="text-3xl">🏥</span> <span class="font-medium text-white">Praktikum · Stationäre Pflege</span></div>
-            <div class="info-bar-item flex items-center gap-3 cursor-pointer transition-all duration-300 hover:translate-x-2"><span class="text-3xl">🇩🇪</span> <span class="font-medium text-white">Deutsch B2 · Zertifiziert</span></div>
-        </div>
+        <!-- تم حذف الشريط السفلي بالكامل -->
     </section>
 
     <!-- Über mich -->
@@ -268,7 +284,7 @@
                      alt="Ahmed Temmouri" 
                      class="w-48 h-48 rounded-full object-cover object-center mb-3 profile-img"
                      style="object-position: 50% 30%;">
-                <span class="text-3xl mb-1">🇫🇷 → 🇩🇪</span>
+                <span class="text-3xl mb-1">‏🇫🇷 → 🇩🇪</span>
                 <h4 class="font-bold text-lg text-white">Pflegeausbildung Deutschland</h4>
                 <p class="text-sm text-blue-300 mt-2">Bereit für die Zukunft</p>
                 <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mt-4 shadow-inner transition-all duration-300 hover:bg-yellow-300 hover:scale-110 cursor-pointer">
@@ -470,7 +486,7 @@
             <h3 class="text-2xl font-bold mb-3 flex items-center gap-2"><i class="fas fa-paper-plane text-yellow-400"></i> Gemeinsam in die Zukunft</h3>
             <p class="text-blue-300 mb-4 text-sm">Ich freue mich auf Ihre Nachricht – Rückfragen, Kennenlernen oder Einladung.</p>
             <a href="mailto:mouritim@gmail.com" class="block bg-yellow-400 text-[#0a1a2f] text-center font-semibold py-3 rounded-xl mb-3 shadow-md transition-all duration-300 hover:bg-yellow-300 hover:scale-105 hover:shadow-xl">✉️ E-Mail Senden · Bewerbung Pflegefachkraft</a>
-            <p class="text-center text-blue-400 text-xs border-t border-[#1e3a5f] pt-4 mt-4">🇩🇪 Bereit für die Pflegeausbildung in Deutschland</p>
+            <p class="text-center text-blue-400 text-xs border-t border-[#1e3a5f] pt-4 mt-4">🇩🇪 Bereit für die Pflegeausbildung في ألمانيا</p>
         </div>
     </div>
 
