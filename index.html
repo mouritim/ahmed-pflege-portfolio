@@ -29,6 +29,21 @@
             background-color: #f59e0b;
             transform: scale(1.05);
         }
+        .btn-blue {
+            background-color: #1e3a5f;
+            color: white;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            transition: all 0.2s;
+            display: inline-block;
+            text-decoration: none;
+            border: 1px solid #2b4b75;
+        }
+        .btn-blue:hover {
+            background-color: #2b4b75;
+            transform: scale(1.05);
+        }
         .profile-img {
             border: 4px solid #fbbf24;
             box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.5);
@@ -51,6 +66,19 @@
             align-items: center;
             justify-content: center;
         }
+        .video-placeholder {
+            background-color: #1e3a5f;
+            border-radius: 1rem;
+            padding: 4rem 2rem;
+            text-align: center;
+            border: 2px dashed #fbbf24;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .video-placeholder:hover {
+            background-color: #2b4b75;
+            transform: scale(1.02);
+        }
     </style>
 </head>
 <body class="text-gray-100 antialiased" style="background-color: #0a1a2f;">
@@ -59,12 +87,12 @@
     <header class="bg-[#0a1a2f] border-b border-[#1e3a5f] sticky top-0 z-40 shadow-lg">
         <div class="max-w-6xl mx-auto px-5 py-3 flex items-center justify-between flex-wrap gap-2">
             <span class="text-xl font-semibold tracking-tight text-white">Ahmed T. <span class="text-sm font-normal text-blue-300">· Pflegefachkraft in Ausbildung</span></span>
-            <nav class="flex gap-4 text-sm font-medium items-center">
+            <nav class="flex gap-4 text-sm font-medium items-center flex-wrap">
                 <a href="#ueber-mich" class="text-white hover:text-yellow-300 transition">Über mich</a>
                 <a href="#kompetenzen" class="text-white hover:text-yellow-300 transition">Kompetenzen</a>
                 <a href="#portfolio" class="text-white hover:text-yellow-300 transition">Portfolio</a>
+                <a href="#videobewerbung" class="text-white hover:text-yellow-300 transition">Videobewerbung</a>
                 <a href="#kontakt" class="text-white hover:text-yellow-300 transition">Kontakt</a>
-                <!-- زر Lebenslauf يفتح رابط Google Drive -->
                 <a href="https://drive.google.com/file/d/1avd7NGBcaW_bbazXm6sUMRgcvqF7eCyF/view?usp=sharing" target="_blank" class="btn-yellow">📄 Lebenslauf</a>
             </nav>
         </div>
@@ -200,6 +228,38 @@
             <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#102a43] border border-[#1e3a5f]"><span class="text-4xl">💊</span><div><h3 class="font-semibold text-white">Medikamentenvergabe</h3><p class="text-sm text-blue-300">Vorbereitung & Vergabe nach Anordnung (in der Ausbildung erlernt)</p></div></div>
             <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#102a43] border border-[#1e3a5f]"><span class="text-4xl">❤️</span><div><h3 class="font-semibold text-white">Empathie</h3><p class="text-sm text-blue-300">Einfühlsame Begleitung von Patienten in allen Lebenssituationen</p></div></div>
             <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#102a43] border border-[#1e3a5f]"><span class="text-4xl">🗣️</span><div><h3 class="font-semibold text-white">Deutsch B2</h3><p class="text-sm text-blue-300">Professionelle Kommunikation mit Patienten & medizinischem Team</p></div></div>
+        </div>
+    </section>
+
+    <!-- قسم الفيديو الجديد (Videobewerbung) -->
+    <section id="videobewerbung" class="max-w-6xl mx-auto px-5 py-14 scroll-mt-16">
+        <h2 class="text-3xl font-bold text-white border-l-8 border-yellow-400 pl-4 mb-10">Videobewerbung</h2>
+        <div class="bg-[#102a43] p-8 rounded-3xl shadow-md border border-[#1e3a5f]">
+            <p class="text-blue-300 mb-6 text-lg">Lernen Sie mich persönlich kennen – meine Motivation, meine Erfahrungen und warum ich die Pflege in Deutschland als meine Berufung sehe.</p>
+            
+            <!-- مكان الفيديو (جاهز لاستقبال الفيديو) -->
+            <div class="video-placeholder" onclick="alert('سيتم إضافة رابط الفيديو قريباً!')">
+                <i class="fas fa-video text-6xl text-yellow-400 mb-4"></i>
+                <h3 class="text-2xl font-bold text-white mb-2">Video wird vorbereitet</h3>
+                <p class="text-blue-300">هنا سيكون فيديو التعريف الشخصي (قريباً)</p>
+                <p class="text-yellow-400 mt-4 text-sm">اضغط هنا لاختبار الرابط (تجريبي)</p>
+            </div>
+
+            <!-- شرح بسيط -->
+            <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-[#1e3a5f] p-4 rounded-xl text-center">
+                    <span class="text-yellow-400 text-2xl">🎥</span>
+                    <p class="text-white mt-2">Persönliches Vorstellungsvideo</p>
+                </div>
+                <div class="bg-[#1e3a5f] p-4 rounded-xl text-center">
+                    <span class="text-yellow-400 text-2xl">💬</span>
+                    <p class="text-white mt-2">Motivation & Erfahrung</p>
+                </div>
+                <div class="bg-[#1e3a5f] p-4 rounded-xl text-center">
+                    <span class="text-yellow-400 text-2xl">🇩🇪</span>
+                    <p class="text-white mt-2">Deutsch B2 Niveau</p>
+                </div>
+            </div>
         </div>
     </section>
 
