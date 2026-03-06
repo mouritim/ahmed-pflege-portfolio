@@ -224,6 +224,27 @@
             color: #25D366;
             font-size: 1.5rem;
         }
+        
+        /* تنسيق قسم التحفيز */
+        .motivation-section {
+            background-color: #102a43;
+            border: 1px solid #1e3a5f;
+            border-radius: 2rem;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            transition: all 0.3s ease;
+        }
+        .motivation-section:hover {
+            border-color: #fbbf24;
+            box-shadow: 0 20px 30px -10px rgba(251, 191, 36, 0.2);
+        }
+        .motivation-content {
+            background-color: #0a1a2f;
+            border-radius: 1rem;
+            padding: 2rem;
+            border-left: 4px solid #fbbf24;
+        }
     </style>
 </head>
 <body class="text-gray-100 antialiased" style="background-color: #0a1a2f;">
@@ -239,6 +260,7 @@
                 <a href="#videobewerbung" class="nav-link text-white">Videobewerbung</a>
                 <a href="#ehrenamt" class="nav-link text-white">Ehrenamt</a>
                 <a href="#kontakt" class="nav-link text-white">Kontakt</a>
+                <a href="#motivation" class="btn-yellow" style="padding: 0.5rem 1rem; font-size: 0.9rem; background-color: #fbbf24; color: #0a1a2f;">💪 Meine Motivation</a>
                 <a href="https://drive.google.com/file/d/1avd7NGBcaW_bbazXm6sUMRgcvqF7eCyF/view?usp=sharing" target="_blank" class="btn-yellow" style="padding: 0.5rem 1rem; font-size: 0.9rem;">📄 Lebenslauf</a>
             </nav>
         </div>
@@ -279,7 +301,58 @@
                      style="object-position: 50% 30%;">
             </div>
         </div>
-        <!-- تم حذف الشريط السفلي بالكامل -->
+    </section>
+
+    <!-- Meine Motivation Section -->
+    <section id="motivation" class="max-w-4xl mx-auto px-5 py-14 scroll-mt-16">
+        <h2 class="text-3xl font-bold text-white border-l-8 border-yellow-400 pl-4 mb-10">💪 Meine Motivation</h2>
+        <div class="motivation-section">
+            <div class="motivation-content">
+                <div class="flex items-center gap-3 mb-6">
+                    <i class="fas fa-quote-right text-4xl text-yellow-400"></i>
+                    <span class="text-yellow-400 font-bold text-xl">Bewerbung um die Ausbildung als Pflegefachmann</span>
+                </div>
+                
+                <div class="space-y-4 text-blue-200 leading-relaxed">
+                    <p class="border-l-2 border-yellow-400 pl-4">
+                        <span class="text-yellow-400 font-semibold">Sehr geehrte Damen und Herren,</span>
+                    </p>
+                    
+                    <p>
+                        Seit längerer Zeit möchte ich im Bereich der Pflege arbeiten. Der Beruf der Pflegefachkraft interessiert mich sehr, weil ich gerne mit Menschen arbeite und ihnen in schwierigen Situationen helfen möchte. Es ist mir wichtig, Verantwortung zu übernehmen und einen sinnvollen Beruf auszuüben.
+                    </p>
+                    
+                    <p>
+                        Eine persönliche Erfahrung hat meinen Wunsch besonders gestärkt: Ich bin bei meinen Großeltern aufgewachsen und habe sie bis zu ihrem Tod gepflegt und begleitet. In dieser Zeit habe ich gelernt, geduldig zu sein und Verantwortung zu übernehmen. Dabei habe ich gemerkt, dass ich gut mit älteren und kranken Menschen umgehen kann und dass es mich erfüllt, anderen zu helfen.
+                    </p>
+                    
+                    <p>
+                        Zusätzlich habe ich mich in meiner Freizeit ehrenamtlich engagiert. Ich habe Besuche in Kinderkrankenhäusern organisiert und bei der Vorbereitung von Mahlzeiten für kranke Menschen geholfen. Außerdem habe ich eine Ausbildung im Pflegebereich absolviert und dabei praktische Einblicke in den Pflegealltag erhalten. Dadurch kenne ich die grundlegenden Abläufe in der Pflege.
+                    </p>
+                    
+                    <p>
+                        Ich habe einen Master in Germanistik abgeschlossen. Dadurch verfüge ich über sehr gute Deutschkenntnisse, was für die Kommunikation mit Patienten und die Pflegedokumentation von Vorteil ist. Mein Ziel ist jedoch die praktische Arbeit im Pflegebereich. Durch mein Erste-Hilfe-Zertifikat habe ich grundlegende medizinische Kenntnisse erworben. Langfristig möchte ich mich im Pflegebereich weiterentwickeln und an Fortbildungen teilnehmen.
+                    </p>
+                    
+                    <p>
+                        Als französischer Staatsbürger darf ich eine Praktikum in Deutschland ohne zusätzlichen Aufenthaltstitel beginnen. Selbstverständlich werde ich mich nach meiner Ankunft ordnungsgemäß anmelden.
+                    </p>
+                    
+                    <p>
+                        Gerne würde ich meine Ausbildung in Ihrer Einrichtung beginnen und meine Motivation, Lernbereitschaft sowie Zuverlässigkeit einbringen. Über die Möglichkeit zu einem persönlichen Gespräch – gerne auch per Videokonferenz – freue ich mich sehr.
+                    </p>
+                    
+                    <div class="mt-6 pt-4 border-t border-yellow-400/30 flex justify-between items-center">
+                        <span class="text-yellow-400">Mit freundlichen Grüßen</span>
+                        <span class="text-white font-semibold">Temmouri Ahmed</span>
+                    </div>
+                    
+                    <div class="text-sm text-blue-300 mt-4">
+                        <i class="fas fa-map-pin text-yellow-400 mr-2"></i> Paris, 06. März 2026
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Über mich -->
@@ -311,7 +384,7 @@
                      alt="Ahmed Temmouri" 
                      class="w-48 h-48 rounded-full object-cover object-center mb-3 profile-img"
                      style="object-position: 50% 30%;">
-                <span class="text-3xl mb-1">🇫🇷 → 🇩🇪</span>
+                <span class="text-3xl mb-1">🇩🇿 → 🇩🇪</span>
                 <h4 class="font-bold text-lg text-white">Pflegeausbildung Deutschland</h4>
                 <p class="text-sm text-blue-300 mt-2">Bereit für die Zukunft</p>
                 <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mt-4 shadow-inner transition-all duration-300 hover:bg-yellow-300 hover:scale-110 cursor-pointer">
@@ -478,53 +551,4 @@
                     <span class="text-yellow-400 text-2xl transition-all duration-300 group-hover:text-[#0a1a2f]">💬</span>
                     <p class="text-white mt-2 transition-all duration-300 group-hover:text-[#0a1a2f]">Motivation & Erfahrung</p>
                 </div>
-                <div class="bg-[#1e3a5f] p-4 rounded-xl text-center transition-all duration-300 hover:bg-yellow-400 hover:text-[#0a1a2f] cursor-pointer">
-                    <span class="text-yellow-400 text-2xl transition-all duration-300 group-hover:text-[#0a1a2f]">🇩🇪</span>
-                    <p class="text-white mt-2 transition-all duration-300 group-hover:text-[#0a1a2f]">Deutsch B2 Niveau</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sprachkenntnisse + Kontakt (مع إضافة رقم WhatsApp) -->
-    <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-8 pb-14">
-        <div class="bg-[#102a43] p-7 rounded-3xl shadow-md border border-[#1e3a5f] transition-all duration-300 hover:shadow-xl hover:border-yellow-400/50">
-            <h3 class="text-2xl font-bold mb-5 flex items-center gap-2 text-white"><i class="fas fa-globe text-yellow-400"></i> Sprachkenntnisse</h3>
-            <div class="space-y-4">
-                <div class="transition-all duration-300 hover:translate-x-2">
-                    <span class="font-medium text-white">🇩🇿 Arabisch</span> <span class="text-sm text-blue-300 float-right">Muttersprache</span>
-                    <div class="w-full h-2 bg-[#1e3a5f] rounded-full mt-1"><div class="w-full h-2 bg-yellow-400 rounded-full"></div></div>
-                </div>
-                <div class="transition-all duration-300 hover:translate-x-2">
-                    <span class="font-medium text-white">🇫🇷 Français</span> <span class="text-sm text-blue-300 float-right">Fortgeschritten · C1</span>
-                    <div class="w-full h-2 bg-[#1e3a5f] rounded-full mt-1"><div class="w-11/12 h-2 bg-yellow-400 rounded-full"></div></div>
-                </div>
-                <div class="transition-all duration-300 hover:translate-x-2">
-                    <span class="font-medium text-white">🇩🇪 Deutsch</span> <span class="text-sm text-blue-300 float-right">Fließend · B2</span>
-                    <div class="w-full h-2 bg-[#1e3a5f] rounded-full mt-1"><div class="w-4/5 h-2 bg-yellow-400 rounded-full"></div></div>
-                </div>
-                <div class="transition-all duration-300 hover:translate-x-2">
-                    <span class="font-medium text-white">🇬🇧 English</span> <span class="text-sm text-blue-300 float-right">Gut · B1</span>
-                    <div class="w-full h-2 bg-[#1e3a5f] rounded-full mt-1"><div class="w-3/5 h-2 bg-yellow-400 rounded-full"></div></div>
-                </div>
-            </div>
-        </div>
-        <div id="kontakt" class="bg-[#0a1a2f] text-white p-7 rounded-3xl shadow-lg border border-[#1e3a5f] scroll-mt-16 transition-all duration-300 hover:shadow-xl hover:border-yellow-400/50">
-            <h3 class="text-2xl font-bold mb-3 flex items-center gap-2"><i class="fas fa-paper-plane text-yellow-400"></i> Gemeinsam in die Zukunft</h3>
-            <p class="text-blue-300 mb-4 text-sm">Ich freue mich auf Ihre Nachricht – Rückfragen, Kennenlernen oder Einladung.</p>
-            
-            <!-- إضافة رقم WhatsApp -->
-            <div class="whatsapp-number">
-                <i class="fab fa-whatsapp"></i>
-                <a href="https://wa.me/213540486975" target="_blank">+213 540 48 69 75</a>
-            </div>
-            
-            <a href="mailto:mouritim@gmail.com" class="block bg-yellow-400 text-[#0a1a2f] text-center font-semibold py-3 rounded-xl mb-3 shadow-md transition-all duration-300 hover:bg-yellow-300 hover:scale-105 hover:shadow-xl">✉️ E-Mail Senden · Bewerbung Pflegefachkraft</a>
-            <p class="text-center text-blue-400 text-xs border-t border-[#1e3a5f] pt-4 mt-4">🇩🇪 Bereit für die Pflegeausbildung في ألمانيا</p>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="bg-[#0a1a2f] border-t border-[#1e3a5f] py-6 text-center text-sm text-blue-300">
-        <div class="max-w-6xl mx-auto px-5">
-            © 2026 Ahmed Temmouri –
+                <div class="bg-[#1e3a5f] p-4 rounded-xl text-center transition-all duration-300 hover:bg-yellow-400 hover:text-[#0a1a
