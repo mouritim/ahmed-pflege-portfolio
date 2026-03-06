@@ -197,6 +197,33 @@
             justify-content: center;
             margin-top: 2rem;
         }
+        
+        /* تنسيق رقم WhatsApp */
+        .whatsapp-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background-color: #1e3a5f;
+            padding: 0.75rem;
+            border-radius: 9999px;
+            margin-top: 1rem;
+            border: 1px solid #2b4b75;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-number:hover {
+            background-color: #2b4b75;
+            transform: scale(1.02);
+        }
+        .whatsapp-number a {
+            color: #25D366;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .whatsapp-number i {
+            color: #25D366;
+            font-size: 1.5rem;
+        }
     </style>
 </head>
 <body class="text-gray-100 antialiased" style="background-color: #0a1a2f;">
@@ -284,7 +311,7 @@
                      alt="Ahmed Temmouri" 
                      class="w-48 h-48 rounded-full object-cover object-center mb-3 profile-img"
                      style="object-position: 50% 30%;">
-                <span class="text-3xl mb-1">‏🇫🇷 → 🇩🇪</span>
+                <span class="text-3xl mb-1">🇫🇷 → 🇩🇪</span>
                 <h4 class="font-bold text-lg text-white">Pflegeausbildung Deutschland</h4>
                 <p class="text-sm text-blue-300 mt-2">Bereit für die Zukunft</p>
                 <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mt-4 shadow-inner transition-all duration-300 hover:bg-yellow-300 hover:scale-110 cursor-pointer">
@@ -459,7 +486,7 @@
         </div>
     </section>
 
-    <!-- Sprachkenntnisse + Kontakt -->
+    <!-- Sprachkenntnisse + Kontakt (مع إضافة رقم WhatsApp) -->
     <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-8 pb-14">
         <div class="bg-[#102a43] p-7 rounded-3xl shadow-md border border-[#1e3a5f] transition-all duration-300 hover:shadow-xl hover:border-yellow-400/50">
             <h3 class="text-2xl font-bold mb-5 flex items-center gap-2 text-white"><i class="fas fa-globe text-yellow-400"></i> Sprachkenntnisse</h3>
@@ -485,6 +512,13 @@
         <div id="kontakt" class="bg-[#0a1a2f] text-white p-7 rounded-3xl shadow-lg border border-[#1e3a5f] scroll-mt-16 transition-all duration-300 hover:shadow-xl hover:border-yellow-400/50">
             <h3 class="text-2xl font-bold mb-3 flex items-center gap-2"><i class="fas fa-paper-plane text-yellow-400"></i> Gemeinsam in die Zukunft</h3>
             <p class="text-blue-300 mb-4 text-sm">Ich freue mich auf Ihre Nachricht – Rückfragen, Kennenlernen oder Einladung.</p>
+            
+            <!-- إضافة رقم WhatsApp -->
+            <div class="whatsapp-number">
+                <i class="fab fa-whatsapp"></i>
+                <a href="https://wa.me/213540486975" target="_blank">+213 540 48 69 75</a>
+            </div>
+            
             <a href="mailto:mouritim@gmail.com" class="block bg-yellow-400 text-[#0a1a2f] text-center font-semibold py-3 rounded-xl mb-3 shadow-md transition-all duration-300 hover:bg-yellow-300 hover:scale-105 hover:shadow-xl">✉️ E-Mail Senden · Bewerbung Pflegefachkraft</a>
             <p class="text-center text-blue-400 text-xs border-t border-[#1e3a5f] pt-4 mt-4">🇩🇪 Bereit für die Pflegeausbildung في ألمانيا</p>
         </div>
@@ -493,9 +527,4 @@
     <!-- Footer -->
     <footer class="bg-[#0a1a2f] border-t border-[#1e3a5f] py-6 text-center text-sm text-blue-300">
         <div class="max-w-6xl mx-auto px-5">
-            © 2026 Ahmed Temmouri – Pflegefachkraft in Ausbildung. Alle Rechte vorbehalten.
-        </div>
-    </footer>
-
-</body>
-</html>
+            © 2026 Ahmed Temmouri –
