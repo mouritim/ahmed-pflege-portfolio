@@ -111,6 +111,15 @@
             color: #fbbf24;
             font-weight: 500;
         }
+        /* تنسيق الصورة الدائرية في قسم Roter Halbmond */
+        .halbmond-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #fbbf24;
+            box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.5);
+        }
     </style>
 </head>
 <body class="text-gray-100 antialiased" style="background-color: #0a1a2f;">
@@ -202,15 +211,16 @@
         </div>
     </section>
 
-    <!-- Ehrenamtliches Engagement Section (New) -->
+    <!-- Ehrenamtliches Engagement Section (مع الصورة الجديدة) -->
     <section id="ehrenamt" class="max-w-6xl mx-auto px-5 py-14 scroll-mt-16">
         <h2 class="text-3xl font-bold text-white border-l-8 border-yellow-400 pl-4 mb-10">Ehrenamtliches Engagement</h2>
         <div class="bg-[#102a43] p-8 rounded-3xl shadow-md border border-[#1e3a5f]">
             <div class="flex flex-col md:flex-row gap-8 items-center">
                 <div class="md:w-1/3 flex justify-center">
-                    <div class="w-48 h-48 bg-red-600 rounded-full flex items-center justify-center shadow-xl border-4 border-white">
-                        <i class="fas fa-hand-holding-heart text-6xl text-white"></i>
-                    </div>
+                    <!-- الصورة الجديدة بدلاً من الأيقونة -->
+                    <img src="https://i.postimg.cc/0QQPWL0y/IMG-2009.jpg" 
+                         alt="Roter Halbmond" 
+                         class="halbmond-image">
                 </div>
                 <div class="md:w-2/3">
                     <h3 class="text-2xl font-bold text-yellow-400 mb-3">Roter Halbmond · Erste-Hilfe-Kurs</h3>
