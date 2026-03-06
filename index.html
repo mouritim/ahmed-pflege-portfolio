@@ -66,18 +66,49 @@
             align-items: center;
             justify-content: center;
         }
-        .video-placeholder {
-            background-color: #1e3a5f;
-            border-radius: 1rem;
-            padding: 4rem 2rem;
-            text-align: center;
-            border: 2px dashed #fbbf24;
+        .video-thumbnail {
+            position: relative;
+            border-radius: 1.5rem;
+            overflow: hidden;
             cursor: pointer;
+            box-shadow: 0 20px 30px -10px rgba(0,0,0,0.5);
+            transition: transform 0.3s;
+        }
+        .video-thumbnail:hover {
+            transform: scale(1.02);
+        }
+        .video-thumbnail img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fbbf24;
+            color: #0a1a2f;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
             transition: all 0.3s;
         }
-        .video-placeholder:hover {
-            background-color: #2b4b75;
-            transform: scale(1.02);
+        .play-button:hover {
+            background-color: #f59e0b;
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        .video-caption {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            color: #fbbf24;
+            font-weight: 500;
         }
     </style>
 </head>
@@ -158,7 +189,7 @@
                      alt="Ahmed Temmouri" 
                      class="w-48 h-48 rounded-full object-cover object-center mb-3 profile-img"
                      style="object-position: 50% 30%;">
-                <span class="text-3xl mb-1"> 🇩🇪</span>
+                <span class="text-3xl mb-1">🇫🇷 → 🇩🇪</span>
                 <h4 class="font-bold text-lg text-white">Pflegeausbildung Deutschland</h4>
                 <p class="text-sm text-blue-300 mt-2">Bereit für die Zukunft</p>
                 <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mt-4 shadow-inner">
@@ -231,22 +262,25 @@
         </div>
     </section>
 
-    <!-- قسم الفيديو الجديد (Videobewerbung) -->
+    <!-- قسم الفيديو الجديد مع الصورة وزر التشغيل -->
     <section id="videobewerbung" class="max-w-6xl mx-auto px-5 py-14 scroll-mt-16">
         <h2 class="text-3xl font-bold text-white border-l-8 border-yellow-400 pl-4 mb-10">Videobewerbung</h2>
         <div class="bg-[#102a43] p-8 rounded-3xl shadow-md border border-[#1e3a5f]">
             <p class="text-blue-300 mb-6 text-lg">Lernen Sie mich persönlich kennen – meine Motivation, meine Erfahrungen und warum ich die Pflege in Deutschland als meine Berufung sehe.</p>
             
-            <!-- مكان الفيديو (جاهز لاستقبال الفيديو) -->
-            <div class="video-placeholder" onclick="alert('سيتم إضافة رابط الفيديو قريباً!')">
-                <i class="fas fa-video text-6xl text-yellow-400 mb-4"></i>
-                <h3 class="text-2xl font-bold text-white mb-2">Video wird vorbereitet</h3>
-                <p class="text-blue-300">هنا سيكون فيديو التعريف الشخصي (قريباً)</p>
-                <p class="text-yellow-400 mt-4 text-sm">اضغط هنا لاختبار الرابط (تجريبي)</p>
+            <!-- صورة الفيديو مع زر التشغيل -->
+            <div class="video-thumbnail" onclick="window.open('https://www.youtube.com/watch?v=platzhalter', '_blank')">
+                <img src="https://i.postimg.cc/90pvBsPX/IMG-2002.jpg" alt="Vorstellungsvideo Vorschau">
+                <div class="play-button">
+                    <i class="fas fa-play"></i>
+                </div>
+            </div>
+            <div class="video-caption">
+                Temmouri Ahmed - vorstellingsvideo
             </div>
 
             <!-- شرح بسيط -->
-            <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div class="bg-[#1e3a5f] p-4 rounded-xl text-center">
                     <span class="text-yellow-400 text-2xl">🎥</span>
                     <p class="text-white mt-2">Persönliches Vorstellungsvideo</p>
